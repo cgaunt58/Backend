@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+<h1>Update Trip</h1>
+
+<form method = 'POST' action = '/update-trip/{{tripId}}'>
+<input type="text" value="{{title}}" name="tripTitle" />
+<input type="text" value="{{image}}" name="imageURL" />
+<input type="text" value="{{city}}" name="city" />
+<label for="depart">Departure date:</label>
+<input type="date" id="depart" name="departureDate" value="{{departureDate}}" min="2022-01-01" max="2029-12-31" />
+       <label for="return">Return date:</label>
+<input type="date" id="return" name="returnDate" value="{{returnDate}}" min="2022-01-01" max="2029-12-31" />
+<button>Update Trip</button>
+</form>
+
+
+
+</body>
+</html>
