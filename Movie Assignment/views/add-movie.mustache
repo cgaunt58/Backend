@@ -1,0 +1,27 @@
+
+<html>
+    <head>
+    <link rel = "stylesheet" href = "/css/styles.css" />
+    </head>
+    <body>
+      <div class="topnav">
+      <a class="active" href='/movies'>MovieDb</a>
+      <a href= "/movies/add-movie">Add a Movie</a>
+      <a href="/movies/movie-details">Movie Details</a>
+</div>
+        <h1>Add a Movie</h1>
+
+        <form method = "POST" action = "/create-movie">
+            Movie Name:
+            <input type = "text" placeholder= 'Movie Name' name="movieName" />
+            Description:
+            <input type = "text" placeholder= 'Description' name="movieDescription" />
+            Genre:
+           <input type = "text" placeholder= 'Genre' name="movieGenre" />
+            Movie Poster Url:
+           <input type = "text" placeholder= 'Poster URL' name="posterUrl" />
+            <button>Submit</button>
+        </form>
+        
+    </body>
+</html>

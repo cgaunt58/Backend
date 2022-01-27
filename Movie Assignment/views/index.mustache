@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "/css/styles.css" />
+    </head>
+    <body>
+    <div class="topnav">
+      <a class="active" href='/movies'>MovieDb</a>
+      <a href= "/movies/add-movie">Add a Movie</a>
+      <a href="/movies/movie-details">Movie Details</a>
+</div>
+<h1 class="welcome">Welcome to MovieDb!</h1>
+        <ul class= 'movieContainer'>
+        {{#movies}}
+        <li>
+            <label><img src="{{poster}}"  width=15% height=20%></label>
+            <form method = 'POST' action = '/movies/delete-movie'>           
+                <input type = "hidden" value = {{movieId}} name = "movieId" />
+                <button>Delete</button>
+            </form>
+        </li>
+        {{/movies}}
+
+        {{^movies}}
+            There are no more movies!
+        {{/movies}}
+
+        </ul>
+    </body>
+</html>
+
