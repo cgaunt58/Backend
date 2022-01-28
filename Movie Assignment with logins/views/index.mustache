@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "/css/styles.css" />
+    </head>
+    <body>
+       <form method= "post" action= '/logout'>
+         <div class="topnav">
+          <a class="active" href='/movies'>MovieDb</a>
+          <a href= "/movies/add-movie">Add a Movie</a>
+          <a href="/movies/movie-details">Movie Details</a>
+          <div class ="topnav-right">
+           <a href="/logout" class = "buttons">Logout</a>
+      </div>
+</div>
+</form>
+<h1 class="welcome">Welcome to MovieDb!</h1>
+<br>
+<h1 class="welcome">Please Login to view your movies!</h1>
+  
+ <form action="/login" method="POST">
+  <div class="imgcontainer">
+  </div>
+
+  <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit">Login</button>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+       <span class="register">New useres clickt to <a href="/registration">register</a></span>
+
+  </div>
+</form>
+
+        {{errorMessage}}
+    
+
+       
+   
+   
+   
+   
+   
+   
+   
+    </body>
+</html>
+

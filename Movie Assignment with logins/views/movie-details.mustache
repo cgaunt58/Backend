@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "/css/styles.css" />
+    </head>
+    <body>
+    <form method= "post" action= '/logout'>
+    <div class="topnav">
+      <a class="active" href='/movies'>MovieDb</a>
+      <a href= "/movies/add-movie">Add a Movie</a>
+      <a href="/movies/movie-details">Movie Details</a>
+      <div class ="topnav-right">
+      <a href="/logout" class = "buttons">Logout</a>
+      </div>
+</div>
+</form>
+<h1 class="welcome">Check your movies details</h1>
+        <ul class= 'movieContainer'>
+        {{#movies}}
+        <li>
+             <label><img src="{{poster}}" width=15% height=20%><br><b>{{title}}</b><br> {{description}}<br>{{genre}}</label>
+        </li>
+        {{/movies}}
+        </ul>
+    </body>
+</html>
