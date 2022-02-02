@@ -1,0 +1,35 @@
+<html>
+    <head>
+     <link rel = "stylesheet" href = "/css/styles.css" />
+    </head>
+    
+    <body>
+        <div class="topnav">
+  <a class="active" href="#/index">Home</a>
+  <a href="/create-account">Create Account</a>
+  <a href="/login">Login</a>
+  <a href="view-post">View Your Posts</a>
+</div>
+        <h1>User Posts</h1>
+
+        {{#userPosts}}
+
+            <li>
+                <h3>{{title}}<h3>
+                {{body}}
+                {{date_created}}
+                
+                <form method="POST" action="/delete">
+                    <input type="hidden" value={{post_id}} name="postId"/>
+                    <button>Delete</button>
+                </form>
+                <a href="/edit/{{post_id}}">Edit</a>
+
+            </li>
+
+        {{/userPosts}}
+        </ul>
+
+        
+    </body>
+</html>

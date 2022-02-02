@@ -1,0 +1,44 @@
+<html>
+    <head>
+    <link rel = "stylesheet" href = "/css/styles.css" />
+    </head>
+    
+    <body>
+    <div class="topnav">
+  <a class="active" href="#/index">Home</a>
+  <a href="/create-account">Create Account</a>
+  <a href="/login">Login</a>
+  <a href="view-post">View Your Posts</a>
+</div>
+       
+        <h2 class ='welcome'>Create a post<h2>
+            <form method="POST" action="/create-post">
+                <input type="text" placeholder='Title of Post' name="titleText" />
+                <input type="text" placeholder= 'Enter your post' name="bodyText" />
+                <button>Post</button>
+            </form>
+
+        <ul class= 'postContainer '>
+        {{#allPosts}}
+
+            <li>
+                <h3>{{title}}<h3>
+                {{body}}
+                <br>
+                <br>
+                {{date_created}}
+                
+                <form method="POST" action="/delete">
+                    <input type="hidden" value={{post_id}} name="postId"/>
+                    <button>Delete</button>
+                </form>
+                <a href="/edit/{{post_id}}">Edit</a>
+
+            </li>
+
+        {{/allPosts}}
+        </ul>
+
+        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+     <link rel = "stylesheet" href = "/css/styles.css" />
+    </head>
+    
+    <body>
+        <div class="topnav">
+  <a class="active" href="#/index">Home</a>
+  <a href="/create-account">Create Account</a>
+  <a href="/login">Login</a>
+  <a href="view-post">View Your Posts</a>
+</div>
+       
+
+        <h2>Edit Post<h2>
+            <form method="POST" action="/update">
+                <input type="text" value="{{title}}" name="titleText" />
+                <input type="text" value="{{body}}" name="bodyText" />
+                <input type="hidden" value={{post_id}} name="postId"/>
+                <button>Update</button>
+            </form>
+        
+
+        
+    </body>
+</html>
